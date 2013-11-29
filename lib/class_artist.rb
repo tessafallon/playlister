@@ -2,6 +2,7 @@
 
 class Artist
 	attr_accessor :name, :songs, :genres, :genre
+	@@all = []
 	#@@artist_clear this here>?
  #if you declare CONSTANT as an ARRAY, you can still change the conents of the array
 
@@ -10,6 +11,7 @@ class Artist
 		@name = name
 		@songs = []
 		@genres = []
+		@@all << self
 	end
 
 #genre is add at song level
@@ -29,7 +31,19 @@ class Artist
 		  @songs = songs
   		end
 	
+	def self.all
+		@@all
 	end
+
+	def self.reset_artists
+		@@all.delete(self)
+	end
+
+	def self.count
+		p @@all.length
+	end
+end
+
 
 	#ea time a song is added, the genre should be added to the artist's genre array
 

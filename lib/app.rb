@@ -16,13 +16,6 @@ song.name = "Work it"
 song.artist = Artist.new.tap{|artists| artists.name = "Tessa"}
 p song.genre = Genre.new.tap {|genre| genre.name = "rap"}
 
-[1,2].each do
-      artist = Artist.new
-      song = Song.new
-      song.genre = genre
-      artist.add_song(song)
-    end
-
 artist = Artist.new
 artist.name = "Bob"
 artist.song
