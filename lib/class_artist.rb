@@ -21,16 +21,12 @@ class Artist
 		genre.artists << self
 	end
 	
-	def songs=(songs)
-		  @songs = songs
-  		end
-
   	def songs_count
   		songs.count
   	end
 	
 	def self.all
-		p ARTISTS
+		ARTISTS
 	end
 
 	def self.reset_artists
@@ -38,6 +34,6 @@ class Artist
 	end
 
 	def self.count
-		p ARTISTS.count
+		ARTISTS.count
 	end
 end

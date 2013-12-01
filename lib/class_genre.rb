@@ -11,12 +11,8 @@ class Genre
 
 	def songs=(songs)
 		@songs = songs
-  		p genre.songs
+  		genre.songs
   	end
-
-	def genres=(genres)
-		GENRES
-  	end 
   	
   	def self.all
   		GENRES
