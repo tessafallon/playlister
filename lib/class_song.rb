@@ -3,11 +3,16 @@ class Song
 	SONGS = []
 	
 	def initialize
+		@artist = []
 		SONGS << self
 	end	
 
+	def artist
+		artist.songs << self
+	end
+
 	def genre=(genre)
     @genre = genre
-    genre.songs = self
+    #genre.songs << self
  	end
 end

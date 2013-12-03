@@ -28,11 +28,18 @@ end
 
 
 music[:catalog].each_with_index do |item, i|
-Artist.new.name = item[:artist]
-Song.new.name = item[:song]
+temp_a = Artist.new
+temp_a.name = item[:artist]
+temp = Song.new
+temp.name = item[:song]
+temp_a.add_song(item[:song]) 
 Genre.new.name = item[:genre]
+temp.genre=(item[:genre])
 end
 
+
+#music[:catalog].each do |item|
+	
 
 # variable i to increment artist name and catalog index no #look into eval
 #  puts i = Artist.new

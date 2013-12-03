@@ -9,12 +9,9 @@ class Genre
 	end
 
 	def songs=(songs)
-<<<<<<< HEAD
 		@songs ||= [] #conditional: create an array if none exists
-=======
 		@songs = songs
-  		genres.songs
->>>>>>> 90274f32c0aece72f1e854cc9c228603f1bdd587
+  		#genres.songs
   	end
   	
   	def self.all
@@ -28,4 +25,8 @@ class Genre
 	def artists
     songs.collect{|s| s.artist}.uniq
   	end
+
+  	def self.list
+		GENRES.each_with_index do |genre, index| puts "#{genre.name}" end
+	end
 end
