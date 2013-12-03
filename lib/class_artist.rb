@@ -1,18 +1,15 @@
 class Artist
-	attr_accessor :name, :songs, :genres, :genre
+	attr_accessor :name, :songs, :genre
 	ARTISTS = []
 
-	def initialize(name)
+	def initialize
 		@name = name
-		@songs = []
-		@genre = []
 		ARTISTS << self
 	end	
 
-	def add_song (song)
+	def add_song
 		@songs << song
-		@genres << song.genre
-		genre.artists << self
+		song.artist = self #sets value of song.artist from song class to self from artist class
 	end
 	
   	def songs_count
@@ -30,4 +27,8 @@ class Artist
 	def self.count
 		ARTISTS.count
 	end
+
+	def genres
+    	songs.collect{|s| s.genre}.uniq
+  end
 end

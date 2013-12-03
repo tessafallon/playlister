@@ -1,17 +1,15 @@
-class Genres
-	attr_accessor  :songs, :name, :artists, :genres
+class Genre
+	attr_accessor  :songs, :name
 	GENRES = []
 	
-	def initialize(name)
+	def initialize
 		@name = name
 		@songs = []
-		@artists = []
 		GENRES << self
 	end
 
 	def songs=(songs)
-		@songs = songs
-  		genres.songsf
+		@songs ||= [] #conditional: create an array if none exists
   	end
   	
   	def self.all
@@ -22,6 +20,7 @@ class Genres
 		GENRES.clear
 	end
 
-
+	def artists
+    songs.collect{|s| s.artist}.uniq
+  	end
 end
-
