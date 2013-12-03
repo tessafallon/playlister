@@ -11,7 +11,11 @@ class Genre
 	def songs=(songs)
 		@songs ||= [] #conditional: create an array if none exists
 		@songs = songs
+<<<<<<< HEAD
   		#genres.songs
+=======
+  		genres.songs
+>>>>>>> c5533100070bbcd0da55315d1e1e46f61f079e75
   	end
   	
   	def self.all
