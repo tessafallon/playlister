@@ -33,11 +33,6 @@ Song.new.name = item[:song]
 Genre.new.name = item[:genre]
 end
 
-puts Genre::GENRES.uniq.inspect #doesn't work properly
-
-puts Genre.name #doesn't work properly
-
-
 
 # variable i to increment artist name and catalog index no #look into eval
 #  puts i = Artist.new
